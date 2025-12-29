@@ -1,7 +1,12 @@
+'use client'
+import { useDispatch } from 'react-redux'
+import { toggle } from '../store/lightbulbSlice'
 
-export function Switch({ flickSwitchHandler }: { flickSwitchHandler: () => void }) {
+export function Switch() {
+  const dispatch = useDispatch()
+
   return (
-    <button onClick={flickSwitchHandler}>
+    <button onClick={() => dispatch(toggle())}>
       switch
     </button>
   )
