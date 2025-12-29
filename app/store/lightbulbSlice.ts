@@ -12,9 +12,13 @@ const initialState: LightbulbState = {
 
 // slice reducer
 const lightbulbSlice = createSlice({
-  name: 'lightbulb', // TODO: name of what???
+  // NOTE: this is the namespace/prefix of your action types.
+  // So Redux Toolkit will automatically generate these action types for you:
+  // 'lightbulb/toggle'
+  // 'lightbulb/turnOn'
+  // 'lightbulb/turnOff'
+  name: 'lightbulb',
   initialState, // initial state
-
   // reducers for different actions
   reducers: {
     toggle: (state) => {
